@@ -30,7 +30,7 @@ jobs:
       # Build the program with the given configuration.
       run: |
         cmake -S . -B build
-        cmake --build build
+        cmake --build .
 
     - name: Run Test
       run: |
