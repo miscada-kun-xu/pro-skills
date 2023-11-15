@@ -1,4 +1,4 @@
-#include "googletest/include/gtest/gtest.h"
+#include "GoogleTest/include/gtest/gtest.h"
 #include "gs.cpp" // Include the header file with Gray-Scott simulation functions
 
 TEST(VariablesSizeTest, UAndVAreSameSize) {
