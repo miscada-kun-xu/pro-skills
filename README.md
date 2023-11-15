@@ -94,12 +94,30 @@ add_executable(<name> <source file>)
 ```
 Below is the CMake example:
 
-```
-mkdir build
-cd build
-cmake ..
-make
-```
+#### Step 1: Build Your Tests
+Before you can run any tests, you need to build them. If you are using CMake with a testing framework, the typical process would be something like this:
+Open Command Prompt and navigate to your project directory.
+Create a build directory and navigate into it:
+
+<code>mkdir build
+<code>cd build
+
+Run CMake to generate build files:
+
+<code> cmake ..
+This will build the project in the Release configuration. You can change Release to Debug or any other configuration you have set up.
+
+#### Step 2: Locate the Test Executable
+After building your project, find the executable file for your tests. (It will typically be in the Release or Debug subdirectory of your build directory, depending on the configuration you chose.)
+
+#### Step 3: Run the Test Executable
+To run the tests, simply call the test executable from the Command Prompt. For example:
+
+<code>.\your_test_executable
+Replace your_test_executable.exe with the actual name of your test binary.
+
+#### Step 4: View the Results
+After running the test executable, you should see the results output in the Command Prompt window. GoogleTest, for example, provides a detailed report of which tests passed and which failed, along with any assertion messages.
 
 These codes tell the build system where to find its headers and source files.
 #### Useful link for system build
