@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #include "GoogleTest/include/gtest/gtest.h"
 #include "simulation.h" // If your simulation is in a header file, include it here.
 
