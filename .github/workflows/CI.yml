@@ -1,5 +1,4 @@
-# This workflow is to build and test our repository automatically
-name: AutoTest
+name: CMake GoogleTest CI
 
 on:
   push:
@@ -14,7 +13,7 @@ jobs:
     runs-on: ${{ matrix.os }}
 
     strategy:
-      # Set fail-fast to false to ensure that feedback is delivered for all matrix combinations. Consider changing this to true when your workflow is stable.
+      # Set fail-fast to false to ensure that feedback is delivered for all matrix combinations.
       fail-fast: false
       
       matrix:
@@ -28,7 +27,7 @@ jobs:
       uses: jwlawson/actions-setup-cmake@v1.13
       
     - name: Build
-      # Build your program with the given configuration. Note that --config is needed because the default Windows generator is a multi-config generator (Visual Studio generator).
+      # Build the program with the given configuration.
       run: |
         cmake -S . -B build
         cmake --build build
