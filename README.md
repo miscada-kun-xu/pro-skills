@@ -99,12 +99,12 @@ Before you can run any tests, you need to build them. If you are using CMake wit
 Open Command Prompt and navigate to your project directory.
 Create a build directory and navigate into it:
 
-<code>mkdir build
-<code>cd build
+<code>mkdir build</code>
+<code>cd build</code>
 
 Run CMake to generate build files:
 
-<code> cmake ..
+<code>cmake ..</code>
 This will build the project in the Release configuration. You can change Release to Debug or any other configuration you have set up.
 
 #### Step 2: Locate the Test Executable
@@ -113,7 +113,7 @@ After building your project, find the executable file for your tests. (It will t
 #### Step 3: Run the Test Executable
 To run the tests, simply call the test executable from the Command Prompt. For example:
 
-<code>.\your_test_executable
+<code>.\your_test_executable</code>
 Replace your_test_executable.exe with the actual name of your test binary.
 
 #### Step 4: View the Results
