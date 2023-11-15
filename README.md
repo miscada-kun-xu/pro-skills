@@ -11,7 +11,7 @@ Group members: Aihaiti Ailipaer, Kaihuai Zhang, Kaiming Xin, Kun Xu, Tingjie Cui
 3. [Git command and Github](#Git-command-and-Github)
 4. [System build](#System-build)
 5. [Code testing](#Code-testing)
-6. [Continuous Integration (CI)](#Continuous-Integration-(CI))
+6. [Continuous Integration](#Continuous-Integration)
 7. [References](#References)
 
 
@@ -112,7 +112,7 @@ Unit Testing is a dynamic code analysis process that identifies issues by restri
 #### Linting
 Linting is a static code analysis process that identifies issues in the source code defining a program, like bugs and stylistic issues. [<sup>2</sup>](#refer-anchor-2)
 
-### Continuous Integration (CI)
+### Continuous Integration
 To ensure the stability of the repository, Continuous Integration (CI) could be created. CI could help software developers to test feature A with no influence on feature B.
 
 
