@@ -72,9 +72,10 @@ add_executable(<name> <source file>)
 Below is the CMake example:
 
 ```
-cd build_dir
-cmake ../
-cmake --build/.
+mkdir build
+cd build
+cmake ..
+make
 ```
 
 These codes tell the build system where to find its headers and source files.
