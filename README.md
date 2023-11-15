@@ -125,6 +125,12 @@ Linting is a static code analysis process that identifies issues in the source c
 ### Continuous Integration
 To ensure the stability of the repository, Continuous Integration (CI) could be created. CI could help software developers to test feature A with no influence on feature B.
 
+Having CI active, developers could get below benefits:
+- Early Detection of Issues
+- Consistent Builds
+- Automated Testing
+- Parallelization
+
 ---
 
 ### References:
