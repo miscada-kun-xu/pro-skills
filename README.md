@@ -4,16 +4,32 @@
 Provided by: Professional Skills Group5
 
 Group members: Aihaiti Ailipaer, Kaihuai Zhang, Kaiming Xin, Kun Xu, Tingjie Cui
-#### Introduction
+
+### Table of Contents
+1. [Introduction](#Introduction)
+2. [Requirements](#Requirements)
+3. [Git command and Github](#Git-command-and-Github)
+4. [System build](#System-build)
+5. [Code testing](#Code-testing)
+6. [Continuous Integration (CI)](#Continuous-Integration-(CI))
+7. [References](#References)
+
+
+
+### Introduction
 
 This file will help you create a repository and manage the software build version, then test your software build and implement continuous integration (CI) for your repository.
 
 The text below describes the work of Group 5 in the Professional Skills Code Development Coursework so that new interns could follow.
 
+### Requirements
 
-### 1. Git command and Github
+Before you begin, ensure you meet the following requirements:
+- A Github account, 
+- A bash shell with ssh, 
+- Git installed, Basic text editor
 
-**Needed: Github account, A bash shell with ssh, Git installed, Basic text editor**
+### Git command and Github
 
 Version control could help software developer manage their build much more easily. **Github** is a useful version control tool. It has benefits like **Version Tracking, Collaboration, and Remote Access**, also Github has integration with **Continuous Integration (CI)** for test running.
 
@@ -58,7 +74,7 @@ More Git Command can be found **[GIT CHEAT SHEET](https://education.github.com/g
 6. Use <code>git commit -m “added test.cpp”</code> submit file from staging area to repository.
 7. Use <code>git push origin main</code> uploading a local branch to a remote repository.
 
-### 2. System build
+### System build
 
 In order to use the testing framework to examine the code, a testing system should be built. **CMake** could be used to complete the system build. CMake is a cross-platform open-source build tool for managing and building projects. It is configured by one or more <code>CMakeLists.txt</code> files. 
 
@@ -88,7 +104,7 @@ Template repository: **[gray-scott-sim](www.github.com/scicomp-durham/gray-scott
 Testing framework: **[googletest](https://github.com/google/googletest)**.
 
 Details for using CMake under googletest: **[googletest.README](https://github.com/google/googletest/blob/main/googletest/README.md)**.
-### 3. Code testing 
+### Code testing 
 
 #### Unit test
 Unit Testing is a dynamic code analysis process that identifies issues by restricting the attention of a test to a small unit of code. [<sup>1</sup>](#refer-anchor-1)
@@ -96,11 +112,11 @@ Unit Testing is a dynamic code analysis process that identifies issues by restri
 #### Linting
 Linting is a static code analysis process that identifies issues in the source code defining a program, like bugs and stylistic issues. [<sup>2</sup>](#refer-anchor-2)
 
-### 4. Continuous Integration (CI)
+### Continuous Integration (CI)
 To ensure the stability of the repository, Continuous Integration (CI) could be created. CI could help software developers to test feature A with no influence on feature B.
 
 
-## References:
+### References:
 
 <div id="refer-anchor-1"></div>
 - [1] [COMP51915 — Code Analysis & Continuous Integration](https://blackboard.durham.ac.uk/ultra/courses/_54365_1/outline/file/_1852509_1)
