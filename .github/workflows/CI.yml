@@ -14,10 +14,10 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: pro-skills@v2
 
     - name: Set up CMake
-      uses: actions/setup-cmake@v2
+      uses: pro-skills@v2
       with:
         cmake-version: '3.28.0'
         
