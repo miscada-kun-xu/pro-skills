@@ -18,4 +18,4 @@ jobs:
       run: cmake --build build --config Release
 
     - name: Run Tests
-      run: ./build/simulation_test
+      run: ./build/Test
