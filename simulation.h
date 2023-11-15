@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #ifndef SIMULATION_H
 #define SIMULATION_H
 
@@ -50,7 +49,6 @@ const int outputInterval = 100;      // Output every 1000 iterations
 // Declare the grid (you may choose to encapsulate these in a class instead)
 extern std::vector<std::vector<double>> u;
 extern std::vector<std::vector<double>> v;
-
 // Function declarations
 void init();
 void writeVTKFile(int iteration);
