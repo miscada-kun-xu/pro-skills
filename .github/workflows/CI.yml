@@ -1,32 +1,73 @@
-name: C++ CI
+# name: C++ CI
+
+# on:
+#   push:
+#     branches:
+#       - main
+#   pull_request:
+#     branches:
+#       - main
+
+# jobs:
+#   build:
+#     runs-on: macos-latest
+
+#     steps:
+#     - name: Checkout code
+#       uses: actions/checkout@v2
+
+#     - name: Set up CMake
+#       uses: cmake/setup-cmake@v2
+#       with:
+#         cmake-version: '3.28.0'
+        
+#     - name: Build
+#       run: |
+#         mkdir build
+#         cd build
+#         cmake ..
+#         cmake --build .
+
+
+# This workflow is to build and test our repository automatically
+name: AutoTest
 
 on:
   push:
     branches:
-      - main
+      - 'main'
   pull_request:
     branches:
-      - main
+      - 'main'
 
 jobs:
-  build:
-    runs-on: macos-latest
+  buildAndTest:
+    runs-on: ${{ matrix.os }}
 
+    strategy:
+      # Set fail-fast to false to ensure that feedback is delivered for all matrix combinations. Consider changing this to true when your workflow is stable.
+      fail-fast: false
+      
+      matrix:
+        os: [macos-latest, ubuntu-latest, windows-latest]
+        build_type: [Release]
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+    # Checkout repository
+    - uses: actions/checkout@v4
 
-    - name: Set up CMake
-      uses: cmake/setup-cmake@v2
-      with:
-        cmake-version: '3.28.0'
-        
+    - name: Setup Cmake
+      uses: jwlawson/actions-setup-cmake@v1.13
+      
     - name: Build
+      # Build your program with the given configuration. Note that --config is needed because the default Windows generator is a multi-config generator (Visual Studio generator).
       run: |
-        mkdir build
+        cmake -S . -B build
+        cmake --build build
+
+    - name: Run Test
+      run: |
         cd build
-        cmake ..
-        cmake --build .
+        ctest
         
     - name: Run tests
       run: |
