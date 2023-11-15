@@ -1,58 +1,39 @@
-# name: C++ CI
+# This workflow is to build and test our repository automatically
+name: AutoTest
 
-# on:
-#   push:
-#     branches:
-#       - main
-#   pull_request:
-#     branches:
-#       - main
-
-# jobs:
-#   build:
-#     runs-on: macos-latest
-
-#     steps:
-#     - name: Checkout code
-#       uses: actions/checkout@v4
-
-#     - name: Setup Cmake
-#       uses: jwlawson/actions-setup-cmake@v1.13
-#       with:
-#         cmake-version: '3.28.0'
-        
-#     - name: Build
-#       run: |
-#         sudo cmake CMakeLists.txt
-#         sudo make
-#         g++ -std=c++11 -pthread gs.cpp test.cpp -lgtest_main -lgtest -o test
-#     - name: Run Test
-#       run: |
-#         cd build
-#         ./test
-
-name: C++ CI
-
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - 'main'
+  pull_request:
+    branches:
+      - 'main'
 
 jobs:
-  build:
+  buildAndTest:
+    runs-on: ${{ matrix.os }}
 
-    runs-on: ubuntu-latest
-
+    strategy:
+      # Set fail-fast to false to ensure that feedback is delivered for all matrix combinations. Consider changing this to true when your workflow is stable.
+      fail-fast: false
+      
+      matrix:
+        os: [macos-latest, ubuntu-latest, windows-latest]
+        build_type: [Release]
     steps:
-    - uses: actions/checkout@v2
-    - name: install g++
-      run: sudo apt-get install -y g++
-    - name: install googletest
-      run: sudo apt-get install libgtest-dev 
-    - name: install cmake
+    # Checkout repository
+    - uses: actions/checkout@v4
+
+    - name: Setup Cmake
+      uses: jwlawson/actions-setup-cmake@v1.13
+      
+    - name: Build
+      # Build your program with the given configuration. Note that --config is needed because the default Windows generator is a multi-config generator (Visual Studio generator).
       run: |
-         wget -O - https://apt.kitware.com/keys/kitware-archive-latest.asc 2>/dev/null | sudo apt-key add -
-         sudo apt-add-repository 'deb https://apt.kitware.com/ubuntu/ focal main'
-         sudo apt-get update
-         sudo apt-get install cmake
-    - name: build
-      run: cmake . && make
-    - name: test
-      run: ./test  # Replace with your test executable
+        cmake -S . -B build
+        cmake --build build
+
+    - name: Run Test
+      run: |
+        cd build
+        ctest
