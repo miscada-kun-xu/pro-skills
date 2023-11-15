@@ -2,10 +2,10 @@ cmake_minimum_required(VERSION 3.14)
 project(YourProjectName)
 
 # Include the GoogleTest directory (adjust the path as necessary)
-add_subdirectory(googletest)
+add_subdirectory(GoogleTest)
 
 # Add the GoogleTest header files
-include_directories(googletest/googletest/include)
+include_directories(GoogleTest/include/gtest)
 
 set(CMAKE_CXX_FLAGS_DEBUG "/MTd")
 set(CMAKE_CXX_FLAGS_RELEASE "/MT")
