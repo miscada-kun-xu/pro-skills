@@ -93,7 +93,7 @@ Details for using CMake under googletest: **[googletest.README](https://github.c
 Unit Testing is a dynamic code analysis process that identifies issues by restricting the attention of a test to a small unit of code. [<sup>1</sup>](#refer-anchor-1)
 
 #### Linting
-Linting is a static code analysis process that identifies issues in the source code defining a program, like bugs and stylistic issues. [<sup>1</sup>](#refer-anchor-2)
+Linting is a static code analysis process that identifies issues in the source code defining a program, like bugs and stylistic issues. [<sup>2</sup>](#refer-anchor-2)
 
 ### 4. Continuous Integration (CI)
 To ensure the stability of the repository, Continuous Integration (CI) could be created. CI could help software developers to test feature A with no influence on feature B.
@@ -105,4 +105,4 @@ To ensure the stability of the repository, Continuous Integration (CI) could be 
 - [1] [COMP51915 — Code Analysis & Continuous Integration](https://blackboard.durham.ac.uk/ultra/courses/_54365_1/outline/file/_1852509_1)
 
 <div id="refer-anchor-2"></div>
-- [2] [S. C. Johnson, Lint, a C program checker. Bell TelephoneLaboratories Murray Hill, 1977]([https://blackboard.durham.ac.uk/ultra/courses/_54365_1/outline/file/_1852509_1](http://squoze.net/UNIX/v7/files/doc/15_lint.pdf)http://squoze.net/UNIX/v7/files/doc/15_lint.pdf)
+- [2] [S. C. Johnson, Lint, a C program checker. Bell TelephoneLaboratories Murray Hill, 1977]((http://squoze.net/UNIX/v7/files/doc/15_lint.pdf)http://squoze.net/UNIX/v7/files/doc/15_lint.pdf)
