@@ -49,9 +49,6 @@ jobs:
         cd /usr/src/gtest
         sudo cmake CMakeLists.txt
         sudo make
-        ls
-        sudo cp *.a /usr/lib
-        cd -
         g++ -std=c++11 -pthread gs.cpp test.cpp -lgtest_main -lgtest -o test
     - name: test
       run: ./test
