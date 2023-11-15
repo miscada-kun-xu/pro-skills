@@ -27,7 +27,6 @@ void simulateStep();
 double countElementsAboveThreshold(double threshold);
 
 #endif // SIMULATION_H#pragma once
-=======
 #ifndef SIMULATION_H
 #define SIMULATION_H
 
