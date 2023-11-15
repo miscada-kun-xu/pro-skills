@@ -105,4 +105,4 @@ To ensure the stability of the repository, Continuous Integration (CI) could be 
 - [1] [COMP51915 — Code Analysis & Continuous Integration](https://blackboard.durham.ac.uk/ultra/courses/_54365_1/outline/file/_1852509_1)
 
 <div id="refer-anchor-2"></div>
-- [2] [S. C. Johnson, Lint, a C program checker. Bell TelephoneLaboratories Murray Hill, 1977]((http://squoze.net/UNIX/v7/files/doc/15_lint.pdf)http://squoze.net/UNIX/v7/files/doc/15_lint.pdf)
+- [2] [S. C. Johnson, Lint, a C program checker. Bell TelephoneLaboratories Murray Hill, 1977](http://squoze.net/UNIX/v7/files/doc/15_lint.pdf)
