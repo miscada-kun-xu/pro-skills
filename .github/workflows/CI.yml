@@ -1,33 +1,56 @@
-name: C++ CI
+# name: C++ CI
 
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+# on:
+#   push:
+#     branches:
+#       - main
+#   pull_request:
+#     branches:
+#       - main
+
+# jobs:
+#   build:
+#     runs-on: macos-latest
+
+#     steps:
+#     - name: Checkout code
+#       uses: actions/checkout@v4
+
+#     - name: Setup Cmake
+#       uses: jwlawson/actions-setup-cmake@v1.13
+#       with:
+#         cmake-version: '3.28.0'
+        
+#     - name: Build
+#       run: |
+#         mkdir build
+#         cd build
+#         cmake ..
+#         cmake --build .
+#     - name: Run Test
+#       run: |
+#         cd build
+#         ctest
+name: C/C++ CI
+
+on: [push, pull_request]
 
 jobs:
   build:
-    runs-on: macos-latest
+
+    runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-
-    - name: Setup Cmake
-      uses: jwlawson/actions-setup-cmake@v1.13
-      with:
-        cmake-version: '3.28.0'
-        
-    - name: Build
+    - uses: actions/checkout@v2
+    - name: install dependencies
+      run: sudo apt-get install -y libgtest-dev cmake
+    - name: build
       run: |
-        mkdir build
-        cd build
-        cmake ..
-        cmake --build .
-    - name: Run Test
-      run: |
-        cd build
-        ctest
+        cd /usr/src/gtest
+        sudo cmake CMakeLists.txt
+        sudo make
+        sudo cp *.a /usr/lib
+        cd -
+        g++ -std=c++11 -pthread gs.cpp test.cpp -lgtest_main -lgtest -o test
+    - name: test
+      run: ./test
