@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-#include "googletest/googletest/include/gtest/gtest.h"
+#include "GoogleTest/include/gtest/gtest.h"
 #include "simulation.h" // If your simulation is in a header file, include it here.
 
 // Test 1: Check that the type of the model parameters (F, k) matches that of the element type of the u and v vectors.
