@@ -47,15 +47,37 @@ Version control could help software developer manage their build much more easil
 
 <code>git pull [remote] [branch]</code> fetch changes from the remote repository and merge them with the local branch.
 
+More Git Command can be found **[GIT CHEAT SHEET](https://education.github.com/git-cheat-sheet-education.pdf)**.
 
 #### Instructions for repository build
+1. Create a new repository and make it public to all collaborators. For example, we create a repository called **pro-skills**, with a branch called **main**
+2. Add SSH keys for remote visits.
+3. Use <code>git remote add origin git@github.com:miscada-kun-xu/pro-skills.git</code> to add the remote repository address locally.
+4. Editing the file locally.
+5. Use <code>git test.cpp</code> to add the project file to your Git staging area.
+6. Use <code>git commit -m “added test.cpp”</code> submit file from staging area to repository.
+7. Use <code>git push origin main</code> uploading a local branch to a remote repository.
 
 ### 2. System build
 
+In order to use testing framework to examine the code, testing system should be built. **CMake** could be used to complete system build. CMake is a cross platform open source build tool for managing and building project. It is configured by one-or-more <code>CMakeLists.txt</code> files. Template of shows below:
 
+```
+cmake_minimum_required(<version>)
+project(<name>)
+add_executable(<name> <source file>)
+```
+#### Useful link for system build
+
+Template repository: **[gray-scott-sim](www.github.com/scicomp-durham/gray-scott-sim)**.
+Testing framework: **[gray-scott-sim](https://github.com/google/googletest)**.
 
 
 ### 3. Code testing 
 
 
 ### 4. Continuous Integration (CI)
+
+
+
+
