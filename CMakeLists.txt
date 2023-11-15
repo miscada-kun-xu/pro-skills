@@ -1,15 +1,24 @@
-cmake_minimum_required(VERSION 3.28)
-include(FetchContent)
-FetchContent_Declare(
-  googletest
-  # Specify the commit you depend on and update it regularly.
-  URL https://github.com/google/googletest/archive/5376968f6948923e2411081fd9372e71a59d8e77.zip
-)
-# For Windows: Prevent overriding the parent project's compiler/linker settings
-set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
-FetchContent_MakeAvailable(googletest)
+cmake_minimum_required(VERSION 3.14)
+project(YourProjectName)
 
-# Now simply link against gtest or gtest_main as needed. Eg
-add_executable(test test.cpp)
-target_link_libraries(test gtest gtest_main)
-add_test(NAME example_test COMMAND test)
+# Include the GoogleTest directory (adjust the path as necessary)
+add_subdirectory(googletest)
+
+# Add the GoogleTest header files
+include_directories(googletest/googletest/include)
+
+set(CMAKE_CXX_FLAGS_DEBUG "/MTd")
+set(CMAKE_CXX_FLAGS_RELEASE "/MT")
+
+# Define your test executable
+add_executable(simulation_test test.cpp gs.cpp)
+add_definitions(-DUNIT_TESTING)
+
+target_compile_definitions(simulation_test PRIVATE UNIT_TEST)
+
+# Link the Google Test libraries
+target_link_libraries(simulation_test gtest gtest_main)
+
+# Enable testing using Google Test
+enable_testing()
+add_test(NAME simulation_test_executable COMMAND simulation_test_executable)
