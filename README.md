@@ -60,7 +60,7 @@ More Git Command can be found **[GIT CHEAT SHEET](https://education.github.com/g
 
 ### 2. System build
 
-In order to use testing framework to examine the code, testing system should be built. **CMake** could be used to complete system build. CMake is a cross platform open source build tool for managing and building project. It is configured by one-or-more <code>CMakeLists.txt</code> files. Template of shows below:
+In order to use the testing framework to examine the code, a testing system should be built. **CMake** could be used to complete the system build. CMake is a cross-platform open-source build tool for managing and building projects. It is configured by one or more <code>CMakeLists.txt</code> files. Template of shows below:
 
 ```
 cmake_minimum_required(<version>)
@@ -70,6 +70,7 @@ add_executable(<name> <source file>)
 #### Useful link for system build
 
 Template repository: **[gray-scott-sim](www.github.com/scicomp-durham/gray-scott-sim)**.
+
 Testing framework: **[gray-scott-sim](https://github.com/google/googletest)**.
 
 
