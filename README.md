@@ -60,13 +60,23 @@ More Git Command can be found **[GIT CHEAT SHEET](https://education.github.com/g
 
 ### 2. System build
 
-In order to use the testing framework to examine the code, a testing system should be built. **CMake** could be used to complete the system build. CMake is a cross-platform open-source build tool for managing and building projects. It is configured by one or more <code>CMakeLists.txt</code> files. Template of <code>CMakeLists.txt</code> shows below:
+In order to use the testing framework to examine the code, a testing system should be built. **CMake** could be used to complete the system build. CMake is a cross-platform open-source build tool for managing and building projects. It is configured by one or more <code>CMakeLists.txt</code> files. 
+
+Template of <code>CMakeLists.txt</code> shows below, also the C++ standard, common source files, optional libraries (and their requirements), system dependencies, flags could be specified.
 
 ```
 cmake_minimum_required(<version>)
 project(<name>)
 add_executable(<name> <source file>)
 ```
+Below is the CMake example:
+
+```
+cd build_dir
+cmake ../
+cmake --build/.
+```
+
 These codes tell the build system where to find its headers and source files.
 #### Useful link for system build
 
@@ -76,12 +86,23 @@ Template repository: **[gray-scott-sim](www.github.com/scicomp-durham/gray-scott
 
 Testing framework: **[googletest](https://github.com/google/googletest)**.
 
-
+Details for using CMake under googletest: **[googletest.README](https://github.com/google/googletest/blob/main/googletest/README.md)**.
 ### 3. Code testing 
 
+#### Unit test
+Unit Testing is a dynamic code analysis process that identifies issues by restricting the attention of a test to a small unit of code. [<sup>1</sup>](#refer-anchor-1)
+
+#### Linting
+Linting is a static code analysis process that identifies issues in the source code defining a program, like bugs and stylistic issues. [<sup>1</sup>](#refer-anchor-2)
 
 ### 4. Continuous Integration (CI)
+To ensure the stability of the repository, Continuous Integration (CI) could be created. CI could help software developers to test feature A with no influence on feature B.
 
 
+## References:
 
+<div id="refer-anchor-1"></div>
+- [1] [COMP51915 — Code Analysis & Continuous Integration](https://blackboard.durham.ac.uk/ultra/courses/_54365_1/outline/file/_1852509_1)
 
+<div id="refer-anchor-2"></div>
+- [2] [S. C. Johnson, Lint, a C program checker. Bell TelephoneLaboratories Murray Hill, 1977]([https://blackboard.durham.ac.uk/ultra/courses/_54365_1/outline/file/_1852509_1](http://squoze.net/UNIX/v7/files/doc/15_lint.pdf)http://squoze.net/UNIX/v7/files/doc/15_lint.pdf)
