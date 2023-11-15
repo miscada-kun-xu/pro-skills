@@ -14,7 +14,7 @@ Group members: Aihaiti Ailipaer, Kaihuai Zhang, Kaiming Xin, Kun Xu, Tingjie Cui
 6. [Continuous Integration](#Continuous-Integration)
 7. [References](#References)
 
-
+---
 
 ### Introduction
 
@@ -22,12 +22,17 @@ This file will help you create a repository and manage the software build versio
 
 The text below describes the work of Group 5 in the Professional Skills Code Development Coursework so that new interns could follow.
 
+---
+
 ### Requirements
 
 Before you begin, ensure you meet the following requirements:
 - A Github account, 
 - A bash shell with ssh, 
-- Git installed, Basic text editor
+- Git installed
+- Basic text editor
+
+---
 
 ### Git command and Github
 
@@ -74,6 +79,8 @@ More Git Command can be found **[GIT CHEAT SHEET](https://education.github.com/g
 6. Use <code>git commit -m “added test.cpp”</code> submit file from staging area to repository.
 7. Use <code>git push origin main</code> uploading a local branch to a remote repository.
 
+---
+
 ### System build
 
 In order to use the testing framework to examine the code, a testing system should be built. **CMake** could be used to complete the system build. CMake is a cross-platform open-source build tool for managing and building projects. It is configured by one or more <code>CMakeLists.txt</code> files. 
@@ -104,6 +111,9 @@ Template repository: **[gray-scott-sim](www.github.com/scicomp-durham/gray-scott
 Testing framework: **[googletest](https://github.com/google/googletest)**.
 
 Details for using CMake under googletest: **[googletest.README](https://github.com/google/googletest/blob/main/googletest/README.md)**.
+
+---
+
 ### Code testing 
 
 #### Unit test
@@ -115,6 +125,7 @@ Linting is a static code analysis process that identifies issues in the source c
 ### Continuous Integration
 To ensure the stability of the repository, Continuous Integration (CI) could be created. CI could help software developers to test feature A with no influence on feature B.
 
+---
 
 ### References:
 
