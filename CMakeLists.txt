@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.14)
+cmake_minimum_required(VERSION 3.28)
 project(YourProjectName)
 
 # Include the GoogleTest directory (adjust the path as necessary)
