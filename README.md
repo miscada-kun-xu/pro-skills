@@ -27,8 +27,8 @@ The text below describes the work of Group 5 in the Professional Skills Code Dev
 ### Requirements
 
 Before you begin, ensure you meet the following requirements:
-- A Github account, 
-- A bash shell with ssh, 
+- A Github account
+- A bash shell with ssh
 - Git installed
 - Basic text editor
 
