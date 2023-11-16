@@ -140,6 +140,11 @@ Unit Testing is a dynamic code analysis process that identifies issues by restri
 #### Linting
 Linting is a static code analysis process that identifies issues in the source code defining a program, like bugs and stylistic issues. [<sup>2</sup>](#refer-anchor-2)
 
+3 tests provided:
+- Check that the type of the model parameters (F, k) matches that of the element type of the u and v vectors.
+- Check that the variables u and v are the same size.
+- Check that the simulation produces the mathematically correct answer when u = 0 and v = 0.
+
 ### Continuous Integration
 To ensure the stability of the repository, Continuous Integration (CI) could be created. CI could help software developers to test feature A with no influence on feature B.
 
